@@ -1,0 +1,353 @@
+@import "nullstyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@mixin fontStyle($fw, $fsz, $lh, $ls, $c){
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: $fw;
+            font-size: $fsz;
+            line-height: $lh;
+            letter-spacing: $ls;
+            color: $c;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+._container {
+    max-width: 1350px;
+    margin: 0px auto;
+    padding: 0px 15px;
+    box-sizing: content-box;
+}
+//----------------------------------HEADER------------------------------------------
+.header {
+	background: #E5E5E5;
+	&_container {
+		display: flex;
+        min-height: 50px;
+        align-items: center;
+	}
+	&_body {
+        /* top | right | bottom | left */
+		margin: 0px 0px 0px 266px;
+	}
+    @media (max-width: 992px){
+            .header_body {
+            margin: 0px 0px 0px 80px;
+        }
+    }
+	&_link {
+        margin: 0px 0px 0px 30px;
+		@include fontStyle(400, 14px, 16px, none, #333333);
+	}
+}
+//-------------------------------LOGO------------------------------------------------
+.logo {
+    &_container {
+        min-height: 120px;
+    }
+    &_body {
+        display: flex;
+    }
+    &_column {
+        display: flex;
+        flex: 0 1 50%;
+        margin: 20px 0px 0px 0px;
+    }
+    &_img {
+
+    }
+    &_name {
+        @include fontStyle(700, 36px, 42px, none, #66C05D);
+        margin: 20px 0px 0px 0px;
+    }
+    &_iteam{
+        margin: 25px 0px 0px 0px;
+    }
+    &_phone {
+        @include fontStyle(400, 16px, 19px, none, #000000);
+        margin: 0px 40px 0px 0px;
+    }
+    &_button {
+        @include fontStyle(400, 14px, 16px, none, #000000);
+        
+        width: 170px;
+        height: 40px;
+        border: 2px solid #66C05D;
+        border-radius: 40px;
+        background: #FFFFFF;
+    }
+}
+//--------------------------------------------------LINE--------------------------------------
+.line{
+    background: #EFEFEF;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    min-height: 1px;
+}
+//----------------------------------------------NAVI------------------------------------------------
+.navigation {
+    &_container {
+        display: flex;
+        min-height: 79px;
+        align-items: center;
+    }
+    &_body {
+        margin: 0px 0px 0px 150px;
+
+    }
+     @media (max-width: 992px){
+            .navigation_body {
+            margin: 0px 0px 0px 80px;
+        }
+    }
+    @media (max-width: 767px){
+            .navigation_body {
+            margin: 0px 0px 0px 40px;
+        }
+    }
+    &_link {
+        margin: 0px 0px 0px 40px;
+        @include fontStyle(400, 16px, 19px, none, #000000);
+    }
+     @media (max-width: 992px){
+            .navigation_link {
+            margin: 0px 0px 0px 20px;
+        }
+    }
+    @media (max-width: 767px){
+            .navigation_link {
+            margin: 0px 0px 0px 10px;
+        }
+    }
+}
+//-------------------------------------------SALE_MAIN----------------------------------------------------
+.sale {
+        background: url('../img/frame2.png') repeat-x;
+        height: 604px;
+    &_container {
+        min-height: 604rem;
+    }
+    &_body {
+        margin: 192px 0px 0px 0px;
+    }
+    &_column{}
+    &_title {
+        @include fontStyle(700, 48px, 56px, none, #FFFFFF);
+    }
+    &_text {
+        width: 308px;
+        margin: 50px 0px 50px 0px;
+        @include fontStyle(400, 14px, 20px, none, #FFFFFF);
+    }
+    &_button {
+        @include fontStyle(400, 14px, 20px, 0.05em, #FFFFFF);
+        background: #66C05D;
+        border: 2px solid #FFFFFF;
+        border-radius: 40px;
+        width: 170px;
+        height: 40px;
+    }
+}
+//---------------------------------------------GOODS---------------------------------------------
+.goods {
+    background: #EFEFEF;
+    &_container {}
+    &_title{
+        @include fontStyle(700, 24px, 28px, none, #000000);
+        padding: 80px 0px 38px;
+    }
+    &_body {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+    }
+    &_column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 255px;
+        height: 363px;
+        background: #FFFFFF;
+        padding: 0 1rem;
+        flex: 0 1 21.3%;
+
+        align-items: center;
+    }
+    &_text {
+        width: 195px;
+        @include fontStyle(400, 14px, 16px, 0.05em, #333333);
+    }
+    &_button {
+        background: #66C05D;
+        border-radius: 30px;
+        width: 130px;
+        height: 35px;
+        @include fontStyle(400, 14px, 16px, 0.05em, #FFFFFF);
+    }
+    &_goods-img {
+    }
+    &_price {
+        @include fontStyle(500, 21px, 25px, 0.05em, #333333);
+    }
+}
+//---------------------------------GREEN_BLOCKS---------------------------------------
+.contacts-block {
+    background: #EFEFEF;
+    &_container {}
+    &_body {
+        margin: 6.25rem 0px 137px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+    }
+    &_block {
+        background: #66C05D;
+        min-width: 520px;
+        height: 212px;
+        flex: 0 1 45%;
+        padding: 35px 40px;
+        display: flex;
+    }
+     @media (max-width: 992px){
+            .contacts-block_block {
+            margin: 12px 0px 0px 0px;
+        }
+    }
+    @media (max-width: 767px){
+            .contacts-block_block{
+            margin: 12px 0px 0px 0px;
+        }
+    }
+    &_column {}
+    &_title {
+        @include fontStyle(700, 18px, 21px, none, #FFFFFF);
+    }
+    &_text {
+        @include fontStyle(400, 14px, 20px, none, #FFFFFF);
+        margin: 25px 0px 25px 0px;
+        width: 233px;
+    }
+    &_email {
+        width: 225px;
+        height: 35px;
+        background: #FFFFFF;
+        text-align: center;
+        border-radius: 30px;
+         @include fontStyle(400, 14px, 16px, none, #C4C4C4);
+    }
+    &_envelope {
+        margin: 0px 0px 0px 100px;
+    }
+    &_title2 {
+        @include fontStyle(700, 18px, 21px, none, #FFFFFF);
+    }
+    &_text2 {
+       @include fontStyle(400, 14px, 20px, none, #FFFFFF);
+       width: 141px;
+       margin: 25px 0px 25px 0px;
+    }
+    &_indoor{
+        display: block;
+    }
+    &_button {
+        background: #66C05D;
+        border: 2px solid #FFFFFF;
+        border-radius: 30px;
+        width: 170px;
+        height: 35px;
+        @include fontStyle(400, 14px, 16px, none, #FFFFFF);
+    }
+}
+//-----------------------------------------------FOOTER--------------------------------------------
+.footer {
+    &_container {}
+    &_body {
+        background: #FFFFFF;
+        min-height: 120px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2.3em 0em;
+    }
+    &_column {
+         display: flex;
+        flex: 0 1 25%;
+    }
+    &_iteam{
+        margin: 0px -10px;
+    }
+     @media (max-width: 992px){
+            .footer_iteam {
+            margin: 0px 0px 0px 20px;
+        }
+    }
+    &_address {
+        @include fontStyle(400, 14px, 16px, none, #000000);
+        margin: 13px 0px 0px 110px;
+    }
+    @media (max-width: 992px){
+            .footer_address {
+            margin: 13px 0px 0px 70px;
+        }
+    }
+    @media (max-width: 767px){
+            .footer_address {
+            margin: 13px 0px 0px 40px;
+        }
+    }
+    &_phone {
+        @include fontStyle(400, 16px, 19px, none, #000000);
+        margin: 12px 0px 0px 160px;
+    }
+     @media (max-width: 992px){
+            .footer_phone {
+            margin: 12px 0px 0px 70px;
+        }
+    }
+    @media (max-width: 767px){
+            .footer_phone {
+            margin: 12px 0px 0px 40px;
+        }
+    }
+    &_callbutton {
+        width: 170px;
+        height: 40px;
+        background: #FFFFFF;
+        border: 2px solid #66C05D;
+        border-radius: 40px;
+    }
+    &_basement {
+        background: #EFEFEF;
+        height: 64px;
+    }
+    &_basement_container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 25px 0px;
+        column-gap: 345px;
+        @include fontStyle(400, 12px, 14px, none, #828282);
+    }
+    &_socialnetworks{
+        width: 45px;
+        height: 45px;
+        background: #FFFFFF;
+        border: 2px solid #66C05D;
+        border-radius: 50%;
+        margin: 0px 10px;
+
+    }
+    &_info {}
+    &_privacy-policy {}
+}
+.social-network {
+}
+
+
+
+
